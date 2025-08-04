@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kondala Saiganesh - Futuristic Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Fixed Navigation -->
+    <nav>
+        <div class="glass-panel">
+            <a href="#hero" title="Home"><i class="fas fa-home"></i></a>
+            <a href="#about" title="About"><i class="fas fa-user"></i></a>
+            <a href="#projects" title="Projects"><i class="fas fa-briefcase"></i></a>
+            <a href="#skills" title="Skills"><i class="fas fa-cogs"></i></a>
+            <a href="#testimonials" title="Testimonials"><i class="fas fa-comment-dots"></i></a>
+            <a href="#certificates" title="Certificates"><i class="fas fa-certificate"></i></a>
+            <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
+            <button id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section has-canvas-bg">
+        <canvas class="background-canvas" id="hero-canvas"></canvas>
+        <div class="text-center reveal">
+            <div class="glass-panel p-8 md:p-12 inline-block">
+                <img src="https://placehold.co/150x150/333/FFF?text=KS" alt="Kondala Saiganesh" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white/20">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Kondala Saiganesh</h1>
+                <p class="text-xl md:text-2xl mt-4 opacity-70">Frontend Developer & UI Architect</p>
+                <a href="#projects" class="cta-button inline-block text-white font-bold py-3 px-8 rounded-full mt-8 text-lg">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About Me -->
+    <section id="about" class="section">
+        <div class="container mx-auto text-center reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="glass-panel p-8 md:p-12 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/200x200/7F7FD5/FFF?text=Sai" alt="Profile Photo" class="rounded-2xl w-40 h-40 md:w-48 md:h-48">
+                </div>
+                <div class="text-left">
+                    <p class="text-lg leading-relaxed opacity-90">
+                        I'm a passionate frontend developer with a love for creating beautiful, intuitive, and high-performance web experiences. With a foundation in modern frameworks and a keen eye for design, I transform complex ideas into functional and engaging digital products. My journey is driven by curiosity and a constant desire to learn and push the boundaries of what's possible on the web.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Projects -->
+    <section id="projects" class="section">
+        <div class="container w-full max-w-7xl mx-auto text-center reveal">
+            <div class="carousel-main-container p-8 md:p-12">
+                <h2 class="section-title mb-12">My Projects</h2>
+                <div id="projects-carousel" class="carousel-container">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Project 1 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <h3 class="text-2xl font-bold mb-2">Project Neon</h3>
+                                        <p class="mb-4 opacity-80">An interactive data visualization dashboard for a futuristic smart city.</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">React</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">D3.js</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">Tailwind</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="github-button mt-6 self-start inline-flex items-center gap-2 px-4 py-2 rounded-lg">
+                                        <i class="fab fa-github"></i>
+                                        <span>View on GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="carousel-slide">
+                               <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <h3 class="text-2xl font-bold mb-2">Cyberspace Portfolio</h3>
+                                        <p class="mb-4 opacity-80">A personal portfolio website with a cyberpunk aesthetic and glitch effects.</p>
+                                         <div class="flex flex-wrap gap-2">
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">HTML</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">CSS</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">JavaScript</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="github-button mt-6 self-start inline-flex items-center gap-2 px-4 py-2 rounded-lg">
+                                        <i class="fab fa-github"></i>
+                                        <span>View on GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Project 3 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <h3 class="text-2xl font-bold mb-2">Holo-Shop</h3>
+                                        <p class="mb-4 opacity-80">An e-commerce platform concept with holographic product previews.</p>
+                                         <div class="flex flex-wrap gap-2">
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">Vue.js</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">Three.js</span>
+                                            <span class="project-tag text-xs font-semibold px-2 py-1 rounded">Firebase</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="github-button mt-6 self-start inline-flex items-center gap-2 px-4 py-2 rounded-lg">
+                                        <i class="fab fa-github"></i>
+                                        <span>View on GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Skills -->
+    <section id="skills" class="section">
+        <div class="container mx-auto text-center reveal">
+            <h2 class="section-title">My Skillset</h2>
+            <div class="glass-panel p-8 md:p-12 max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-left">Languages</h3>
+                        <div class="space-y-4">
+                            <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">JavaScript (ES6+)</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">Python</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                            </div>
+                             <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">HTML5 & CSS3</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="98%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-left">Frameworks & Libraries</h3>
+                        <div class="space-y-4">
+                            <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">React & Next.js</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">Tailwind CSS</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
+                            </div>
+                             <div class="w-full">
+                                <p class="text-left mb-1 opacity-90">Three.js & WebGL</p>
+                                <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="container w-full max-w-7xl mx-auto text-center reveal">
+            <div class="carousel-main-container p-8 md:p-12">
+                <h2 class="section-title mb-12">What People Say</h2>
+                <div id="testimonials-carousel" class="carousel-container">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Testimonial 1 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-8 rounded-2xl text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <p class="mb-6 opacity-90">"An exceptional developer with a remarkable ability to bring creative visions to life. The attention to detail is second to none."</p>
+                                    </div>
+                                    <p class="font-bold">- Jane Doe, Project Manager</p>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-8 rounded-2xl text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <p class="mb-6 opacity-90">"Working with them was a breeze. They are not only technically proficient but also a great communicator and team player."</p>
+                                    </div>
+                                    <p class="font-bold">- John Smith, Lead Designer</p>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-8 rounded-2xl text-left h-full flex flex-col">
+                                    <div class="flex-grow">
+                                        <p class="mb-6 opacity-90">"The final product exceeded all our expectations. The performance and aesthetics are top-tier. Highly recommended."</p>
+                                    </div>
+                                    <p class="font-bold">- Emily White, CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Certificates -->
+    <section id="certificates" class="section">
+        <div class="container w-full max-w-7xl mx-auto text-center reveal">
+             <div class="carousel-main-container p-8 md:p-12">
+                <h2 class="section-title mb-12">My Certificates</h2>
+                <div id="certificates-carousel" class="carousel-container">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <!-- Certificate 1 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/007BFF/FFFFFF?text=Web+Dev+Cert" alt="Web Development Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Web Development Bootcamp</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Tech Academy</p>
+                                </div>
+                            </div>
+                            <!-- Certificate 2 -->
+                            <div class="carousel-slide">
+                                 <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/28A745/FFFFFF?text=Python+Cert" alt="Python Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Python for Data Science</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Data University</p>
+                                </div>
+                            </div>
+                            <!-- Certificate 2 -->
+                            <div class="carousel-slide">
+                                 <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/28A745/FFFFFF?text=Python+Cert" alt="Python Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Python for Data Science</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Data University</p>
+                                </div>
+                            </div>
+                            <!-- Certificate 2 -->
+                            <div class="carousel-slide">
+                                 <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/28A745/FFFFFF?text=Python+Cert" alt="Python Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Python for Data Science</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Data University</p>
+                                </div>
+                            </div>
+                            <!-- Certificate 2 -->
+                            <div class="carousel-slide">
+                                 <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/28A745/FFFFFF?text=Python+Cert" alt="Python Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Python for Data Science</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Data University</p>
+                                </div>
+                            </div>
+                            <!-- Certificate 3 -->
+                            <div class="carousel-slide">
+                                <div class="glass-panel p-6 text-left h-full flex flex-col">
+                                    <img src="https://placehold.co/400x250/DC3545/FFFFFF?text=React+Cert" alt="React Certificate" class="rounded-lg mb-4 w-full">
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold">Advanced React & Redux</h3>
+                                    </div>
+                                    <p class="opacity-80 mt-2">Issued by Framework Masters</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact -->
+    <section id="contact" class="section has-canvas-bg">
+        <canvas class="background-canvas" id="contact-canvas"></canvas>
+        <div class="container mx-auto text-center reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="glass-panel p-8 md:p-12 max-w-2xl mx-auto">
+                <form>
+                    <div class="mb-6">
+                        <input type="text" placeholder="Your Name" class="form-input w-full p-3 rounded-lg outline-none transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" placeholder="Your Email" class="form-input w-full p-3 rounded-lg outline-none transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <textarea placeholder="Your Message" rows="5" class="form-input w-full p-3 rounded-lg outline-none transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button w-full text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+                <div class="my-8 text-center opacity-70 text-sm tracking-widest">OR CONNECT VIA</div>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <a href="https://wa.me/916303180059" target="_blank" class="contact-button" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/sai-kondala-23b923375 target="_blank" class="contact-button" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/KondalaSaiganesh" target="_blank" class="contact-button" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:saikondala2004@gmail.com" class="contact-button" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+916303180059" class="contact-button" title="Call"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

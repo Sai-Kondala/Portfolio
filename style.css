@@ -1,0 +1,375 @@
+:root {
+    --bg-dark: #0A0A0A;
+    --bg-light: #FFFFFF;
+    --text-light: #F5F5F7;
+    --text-dark: #1d1d1f;
+    --accent-color: rgba(0, 122, 255, 0.8);
+    --accent-glow: rgba(0, 122, 255, 0.5);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.section {
+    min-height: 100vh;
+    padding: 120px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+body.light-mode .section {
+    background: radial-gradient(ellipse at bottom, #eef5ff 0%, #ffffff 100%);
+}
+
+/* --- Canvas Background Sections --- */
+.section.has-canvas-bg {
+    background: #000; /* Fallback, but canvas will cover it */
+}
+
+.background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.section .container, .section .reveal {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* --- Unified Glass Panel Style --- */
+.glass-panel {
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother transition */
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    overflow: hidden; /* This ensures child elements don't break the rounded corners */
+}
+
+.glass-panel:hover {
+    box-shadow: 0 0 40px rgba(0,0,0,0.2), 0 0 30px var(--accent-glow);
+}
+
+body.light-mode .glass-panel {
+    background: #FFFFFF;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+body.light-mode .glass-panel:hover {
+     box-shadow: 0 10px 40px rgba(0,0,0,0.1), 0 0 30px var(--accent-glow);
+}
+
+.carousel-main-container {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+}
+
+body.light-mode .carousel-main-container {
+    background: transparent;
+}
+
+
+/* --- Navigation --- */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+nav .glass-panel {
+    padding: 10px 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+body.light-mode nav .glass-panel {
+     background: rgba(255, 255, 255, 0.7);
+     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+nav a, #theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, height 0.3s;
+}
+
+body.light-mode nav a, body.light-mode #theme-toggle {
+    color: var(--text-dark);
+}
+
+nav a:hover, #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode nav a:hover, body.light-mode #theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav a.active {
+    background-color: var(--accent-color);
+    color: white !important;
+}
+
+/* --- Mobile Navigation --- */
+@media (max-width: 520px) {
+    nav .glass-panel {
+        padding: 8px;
+        gap: 4px;
+    }
+    nav a, #theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- General Content Styling --- */
+.section-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 800;
+    margin-bottom: 3rem; /* 48px */
+    text-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 3.75rem; /* 60px */
+    }
+}
+
+/* --- Hero Section --- */
+#hero .cta-button {
+    background: var(--accent-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+#hero .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* --- Projects Section --- */
+.project-tag {
+    background: rgba(0, 122, 255, 0.2);
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    color: #99cfff;
+}
+body.light-mode .project-tag {
+    background: rgba(0, 122, 255, 0.1);
+    border-color: rgba(0, 122, 255, 0.3);
+    color: #0056b3;
+}
+.github-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+.github-button:hover {
+    background: var(--accent-color);
+    color: white;
+}
+body.light-mode .github-button {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+}
+body.light-mode .github-button:hover {
+    color: white;
+}
+
+
+/* --- Skills Section --- */
+.skill-bar-outer {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    height: 0.75rem;
+}
+body.light-mode .skill-bar-outer {
+    background: rgba(0, 0, 0, 0.1);
+}
+.skill-bar-inner {
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-glow);
+    border-radius: 9999px;
+    height: 100%;
+    width: 0; /* Initial width is 0 */
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth transition */
+}
+
+/* --- Contact Section --- */
+.form-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.light-mode .form-input {
+    background: rgba(0,0,0,0.05);
+}
+.form-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.submit-button {
+    background: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+.contact-button:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+    color: white;
+}
+body.light-mode .contact-button {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+}
+body.light-mode .contact-button:hover {
+    color: white;
+}
+
+
+/* --- Carousel Styles --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .carousel-container {
+        padding: 0 50px; /* Space for buttons */
+    }
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track {
+    display: flex;
+    align-items: stretch; /* Make slides equal height */
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+    flex: 0 0 100%; /* Default to 1 slide on mobile */
+    padding: 0 1rem; /* Spacing between cards */
+}
+
+@media (min-width: 768px) {
+    .carousel-slide {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-slide {
+        flex-basis: 33.333%;
+    }
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.carousel-button:hover {
+    background-color: var(--accent-color);
+}
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.carousel-button.prev {
+    left: -10px;
+}
+.carousel-button.next {
+    right: -10px;
+}
+
+@media (min-width: 768px) {
+    .carousel-button.prev {
+        left: 0;
+    }
+    .carousel-button.next {
+        right: 0;
+    }
+}
+
+body.light-mode .carousel-button {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Scroll-based Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
